@@ -209,9 +209,15 @@ export default function NotasPage() {
                   </div>
 
                   <div className="flex items-center justify-between border-t border-slate-100 pt-3 mt-4">
-                    <div className="flex flex-col">
-                      <span className="text-xs text-slate-500">Total da Matéria</span>
-                      <span className="font-black text-slate-800 text-lg">{qtd > 0 ? media.toFixed(1) : "-"}</span>
+                    <div className="flex gap-5">
+                      <div className="flex flex-col">
+                        <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Média</span>
+                        <span className="font-black text-slate-700 text-xl">{qtd > 0 ? (soma / qtd).toFixed(1) : "-"}</span>
+                      </div>
+                      <div className="flex flex-col pl-5 border-l border-slate-200">
+                        <span className="text-[10px] uppercase font-bold text-blue-400 tracking-wider">Total</span>
+                        <span className="font-black text-blue-600 text-xl">{qtd > 0 ? soma.toFixed(1) : "-"}</span>
+                      </div>
                     </div>
                     <div className={`px-3 py-1 rounded-full text-xs font-bold ${situacao.bg} ${situacao.color}`}>
                       {situacao.label}

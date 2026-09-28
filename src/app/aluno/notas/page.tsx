@@ -125,8 +125,8 @@ export default function NotasPage() {
 
   function getSituacao(media: number, qtd: number) {
     if (qtd === 0) return { label: "Sem notas", color: "text-slate-500", bg: "bg-slate-100" };
-    if (media >= 6) return { label: "Na Média", color: "text-green-700", bg: "bg-green-100" };
-    if (media >= 4) return { label: "Atenção", color: "text-yellow-700", bg: "bg-yellow-100" };
+    if (media >= 6 * qtd) return { label: "Aprovado / Regular", color: "text-green-700", bg: "bg-green-100" };
+    if (media >= 4 * qtd) return { label: "Atenção", color: "text-yellow-700", bg: "bg-yellow-100" };
     return { label: "Risco", color: "text-red-700", bg: "bg-red-100" };
   }
 
@@ -210,7 +210,7 @@ export default function NotasPage() {
 
                   <div className="flex items-center justify-between border-t border-slate-100 pt-3 mt-4">
                     <div className="flex flex-col">
-                      <span className="text-xs text-slate-500">Média da Matéria</span>
+                      <span className="text-xs text-slate-500">Total da Matéria</span>
                       <span className="font-black text-slate-800 text-lg">{qtd > 0 ? media.toFixed(1) : "-"}</span>
                     </div>
                     <div className={`px-3 py-1 rounded-full text-xs font-bold ${situacao.bg} ${situacao.color}`}>

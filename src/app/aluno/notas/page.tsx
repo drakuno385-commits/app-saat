@@ -157,15 +157,7 @@ export default function NotasPage() {
       </header>
 
       <div className="p-4 flex flex-col gap-4 pb-20">
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-6 text-white shadow-md flex items-center justify-between">
-          <div>
-            <p className="text-blue-100 text-sm font-medium">Pontuação Total</p>
-            <h2 className="text-4xl font-black mt-1">{mediaGeral} <span className="text-sm font-medium text-blue-200">pts</span></h2>
-          </div>
-          <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-            <Calculator size={32} className="text-white" />
-          </div>
-        </div>
+
 
         {loading ? (
           <p className="text-center text-slate-500 py-8 font-medium">Carregando notas...</p>

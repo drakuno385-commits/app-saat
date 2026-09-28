@@ -38,7 +38,7 @@ export default function EscolaCadastroPage() {
             raio: Number(data.raio_metros) || 100,
           });
           if (data.lat && data.lng) {
-            setCoords({ lat: -23.7712, lng: -46.6865 });
+            setCoords({ lat: -23.7613199, lng: -46.6735803 });
           }
         }
       } catch (err: any) {
